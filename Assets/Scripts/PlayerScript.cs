@@ -25,16 +25,20 @@ public class PlayerScript : MonoBehaviour
         positionHistory.Insert(0, caterpillar.position);
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-            direction = Vector2.left;
+            if (direction != Vector2.right)
+                direction = Vector2.left;
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-            direction = Vector2.right;
+            if (direction != Vector2.left)
+                direction = Vector2.right;
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-            direction = Vector2.up;
+            if (direction != Vector2.down)
+                direction = Vector2.up;
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-            direction = Vector2.down;
+            if (direction != Vector2.up)
+                direction = Vector2.down;
 
         // move the body segments with the head
         for (int i = 0; i < bodySegments.Count; i++)
