@@ -22,14 +22,17 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        caterpillar.MovePosition(caterpillar.position + direction * moveSpeed * Time.fixedDeltaTime);
-
-        positionHistory.Insert(0, caterpillar.position);
-
+        
         if (Input.GetKeyDown(KeyCode.Return))
         {
             TogglePause();
         }
+
+        if (isPaused) return;
+
+        caterpillar.MovePosition(caterpillar.position + direction * moveSpeed * Time.fixedDeltaTime);
+
+        positionHistory.Insert(0, caterpillar.position);
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             if (direction != Vector2.right)
@@ -91,9 +94,6 @@ public class PlayerScript : MonoBehaviour
 
     void AddBodySegment()
     {
-        // Vector2 spawnPos = caterpillar.position;
-        // GameObject newSegment = Instantiate(bodyPrefabs, spawnPos, Quaternion.identity);
-        // bodySegments.Add(newSegment.transform);
         Vector2 spawnPos;
         if (bodySegments.Count == 0)
         {
@@ -120,6 +120,5 @@ public class PlayerScript : MonoBehaviour
     void TogglePause()
     {
         isPaused = !isPaused;
-        moveSpeed = isPaused ? 0f : currentMoveSpeed;
     }
 }
