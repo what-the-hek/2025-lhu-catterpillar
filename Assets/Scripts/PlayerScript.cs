@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -6,6 +8,9 @@ public class PlayerScript : MonoBehaviour
     public float moveSpeed = 5f;
     public int bodyLength = 1;
     private Vector2 direction = Vector2.up;
+
+    public GameObject bodyPrefabs;
+    private List<Transform> bodySegments = new List<Transform>();
 
     void Start()
     {
@@ -36,5 +41,13 @@ public class PlayerScript : MonoBehaviour
         Debug.Log("body length: " + bodyLength);
         moveSpeed += 0.5f;
         Debug.Log("movement speed: " + moveSpeed);
+        AddBodySegment();
+    }
+
+    void AddBodySegment()
+    {
+        Vector2 spawnPos = caterpillar.position;
+        GameObject newSegment = Instantiate(bodyPrefabs, spawnPos, Quaternion.identity);
+        bodySegments.Add(newSegment.transform);
     }
 }

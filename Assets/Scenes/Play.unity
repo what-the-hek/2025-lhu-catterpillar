@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   bodyLength: 1
+  bodyPrefabs: {fileID: 2665811418454927476, guid: b5e712e481774f248ac00c4a831be498, type: 3}
 --- !u!212 &47204361
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -525,13 +526,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 258044095335776200, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
+      propertyPath: spawnXPositions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8646768430543836994, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07115476
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8646768430543836994, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5200026
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 8646768430543836994, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
       propertyPath: m_LocalPosition.z
