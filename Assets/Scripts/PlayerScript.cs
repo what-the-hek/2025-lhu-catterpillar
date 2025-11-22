@@ -4,6 +4,7 @@ public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D caterpillar;
     public float moveSpeed = 5f;
+    public int bodyLength = 1;
     private Vector2 direction = Vector2.up;
 
     void Start()
@@ -27,5 +28,11 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             direction = Vector2.down;
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        bodyLength += 1;
+        Debug.Log("body length: " + bodyLength);
     }
 }
