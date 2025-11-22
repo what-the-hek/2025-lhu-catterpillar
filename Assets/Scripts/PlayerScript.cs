@@ -51,6 +51,8 @@ public class PlayerScript : MonoBehaviour
         }
         // if(positionHistory.Count > 1000)
         //     positionHistory.RemoveAt(positionHistory.Count -1);
+
+        CheckBorderBounds();
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -75,5 +77,15 @@ public class PlayerScript : MonoBehaviour
         Vector2 spawnPos = caterpillar.position;
         GameObject newSegment = Instantiate(bodyPrefabs, spawnPos, Quaternion.identity);
         bodySegments.Add(newSegment.transform);
+    }
+
+    void CheckBorderBounds()
+    {
+        Vector3 viewPos = Camera.main.WorldToViewportPoint(caterpillar.position);
+        if (viewPos.x < 0 || viewPos.x > 1 || viewPos.y < 0 || viewPos.y > 1)
+        {
+            Debug.Log("GAME OVER");
+            enabled = false;
+        }
     }
 }
