@@ -8,9 +8,9 @@ public class PlayerScript : MonoBehaviour
     public float moveSpeed = 5f;
     public int bodyLength = 1;
     private Vector2 direction = Vector2.up;
-
     public GameObject bodyPrefabs;
     private List<Transform> bodySegments = new List<Transform>();
+    private List<Vector2> positionHistory = new List<Vector2>();
 
     void Start()
     {
@@ -21,6 +21,8 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         caterpillar.MovePosition(caterpillar.position + direction * moveSpeed * Time.fixedDeltaTime);
+
+        positionHistory.Insert(0, caterpillar.position);
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             direction = Vector2.left;
@@ -33,6 +35,18 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             direction = Vector2.down;
+
+        // move the body segments with the head
+        for (int i = 0; i < bodySegments.Count; i++)
+        {
+            int index = (i + 1) * 60; //tweak spacing between segments
+            if (index < positionHistory.Count)
+            {
+                bodySegments[i].position = positionHistory[index];
+            }
+        }
+        // if(positionHistory.Count > 1000)
+        //     positionHistory.RemoveAt(positionHistory.Count -1);
     }
 
     public void OnTriggerEnter2D(Collider2D other)
