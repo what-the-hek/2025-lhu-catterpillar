@@ -83,7 +83,18 @@ public class PlayerScript : MonoBehaviour
 
     void AddBodySegment()
     {
-        Vector2 spawnPos = caterpillar.position;
+        // Vector2 spawnPos = caterpillar.position;
+        // GameObject newSegment = Instantiate(bodyPrefabs, spawnPos, Quaternion.identity);
+        // bodySegments.Add(newSegment.transform);
+        Vector2 spawnPos;
+        if (bodySegments.Count == 0)
+        {
+            spawnPos = caterpillar.position - direction * 0.5f;
+        }
+        else
+        {
+            spawnPos = bodySegments[bodySegments.Count - 1].position;
+        }
         GameObject newSegment = Instantiate(bodyPrefabs, spawnPos, Quaternion.identity);
         bodySegments.Add(newSegment.transform);
     }
