@@ -6,6 +6,8 @@ public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D caterpillar;
     public float moveSpeed = 5f;
+    private float currentMoveSpeed;
+    private bool isPaused = false;
     public int bodyLength = 1;
     private Vector2 direction = Vector2.up;
     public GameObject bodyPrefabs;
@@ -23,6 +25,11 @@ public class PlayerScript : MonoBehaviour
         caterpillar.MovePosition(caterpillar.position + direction * moveSpeed * Time.fixedDeltaTime);
 
         positionHistory.Insert(0, caterpillar.position);
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TogglePause();
+        }
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             if (direction != Vector2.right)
@@ -64,6 +71,7 @@ public class PlayerScript : MonoBehaviour
                 bodyLength += 1;
                 Debug.Log("body length: " + bodyLength);
                 moveSpeed += 0.5f;
+                currentMoveSpeed = moveSpeed += 0.5f;
                 Debug.Log("movement speed: " + moveSpeed);
                 AddBodySegment();
             }
@@ -107,5 +115,11 @@ public class PlayerScript : MonoBehaviour
             Debug.Log("GAME OVER");
             enabled = false;
         }
+    }
+
+    void TogglePause()
+    {
+        isPaused = !isPaused;
+        moveSpeed = isPaused ? 0f : currentMoveSpeed;
     }
 }
