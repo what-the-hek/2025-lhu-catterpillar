@@ -55,11 +55,19 @@ public class PlayerScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        bodyLength += 1;
-        Debug.Log("body length: " + bodyLength);
-        moveSpeed += 0.5f;
-        Debug.Log("movement speed: " + moveSpeed);
-        AddBodySegment();
+        if (other.CompareTag("Food"))
+        {
+            bodyLength += 1;
+            Debug.Log("body length: " + bodyLength);
+            moveSpeed += 0.5f;
+            Debug.Log("movement speed: " + moveSpeed);
+            AddBodySegment();
+        }
+        // TODO it's constantly in contact with it's body so this constantly fires - fix later
+        // if (other.CompareTag("Body"))
+        // {
+        //     Debug.Log("YOU LOSE");
+        // }
     }
 
     void AddBodySegment()

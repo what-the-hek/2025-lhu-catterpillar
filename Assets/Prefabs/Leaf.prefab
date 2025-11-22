@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 258044095335776200}
   m_Layer: 0
   m_Name: Leaf
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,8 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155a8dc39e4511649b30cc7281e2e150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnXPositions: []
-  spawnYPositions: []
-  foodPrefabs:
-  - {fileID: 8771375056523269046}
-  inPlay: 0
+  xIndex: 0
+  yIndex: 0
