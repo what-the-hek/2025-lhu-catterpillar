@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class FoodScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    public float[] spawnXPositions;
+    public float[] spawnYPositions;
+    public GameObject[] prefabs;
+    // void Start()
+    // {
         
-    }
+    // }
 
-    // Update is called once per frame
-    void Update()
-    {
+    // void Update()
+    // {
         
+    // }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+        Debug.Log("MUNCH!!!");
+        // loop back to coroutine to create new prefab
     }
 }
