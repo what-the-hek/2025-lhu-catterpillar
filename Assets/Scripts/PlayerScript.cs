@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -13,11 +15,20 @@ public class PlayerScript : MonoBehaviour
     public GameObject[] bodyPrefabs;
     private List<Transform> bodySegments = new List<Transform>();
     private List<Vector2> positionHistory = new List<Vector2>();
+    public string startScene = "";
+	public Button pauseButton;
+	public Button exitButton;
 
     void Start()
     {
         caterpillar = GetComponent<Rigidbody2D>();
         caterpillar.bodyType = RigidbodyType2D.Kinematic;
+
+        Button pauseBtn = pauseButton.GetComponent<Button>();
+		pauseBtn.onClick.AddListener(TogglePause);
+
+		Button exitBtn = exitButton.GetComponent<Button>();
+		exitBtn.onClick.AddListener(TaskOnClickExit);
     }
 
     void Update()
@@ -124,4 +135,9 @@ public class PlayerScript : MonoBehaviour
     {
         isPaused = !isPaused;
     }
+
+    void TaskOnClickExit()
+	{
+		SceneManager.LoadScene(startScene);
+	}
 }

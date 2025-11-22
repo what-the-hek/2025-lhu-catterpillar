@@ -9,7 +9,7 @@ public class FoodScript : MonoBehaviour
     void Respawn()
     {
         int xIndex = Random.Range(-8, 8);
-        int yIndex = Random.Range(-4, 4);
+        int yIndex = Random.Range(-4, 3);
         Vector2 spawnPosition = new Vector2(xIndex, yIndex);
         transform.position = spawnPosition;
     }
