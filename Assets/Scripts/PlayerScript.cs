@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     public float moveSpeed = 7f;
     private float currentMoveSpeed;
     private bool isPaused = false;
-    public int bodyLength = 1;
+    public int bodyLength = 0;
     private Vector2 direction = Vector2.up;
     public GameObject[] bodyPrefabs;
     private List<Transform> bodySegments = new List<Transform>();
@@ -18,6 +19,9 @@ public class PlayerScript : MonoBehaviour
     public string startScene = "";
 	public Button pauseButton;
 	public Button exitButton;
+    public TextMeshProUGUI score;
+    public GameObject gameWinBlob;
+    public GameObject gameOverBlob;
 
     void Start()
     {
@@ -33,7 +37,8 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        
+        score.text = $"{bodyLength} / 15";
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             TogglePause();
@@ -94,6 +99,7 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("YOU WIN");
             moveSpeed = 0f;
+            gameWinBlob.SetActive(true);
         }
             
         // TODO it's constantly in contact with it's body so this constantly fires - fix later
@@ -127,6 +133,7 @@ public class PlayerScript : MonoBehaviour
         if (viewPos.x < 0 || viewPos.x > 1 || viewPos.y < 0 || viewPos.y > 1)
         {
             Debug.Log("GAME OVER");
+            gameOverBlob.SetActive(true);
             enabled = false;
         }
     }
