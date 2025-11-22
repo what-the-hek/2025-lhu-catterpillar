@@ -5,12 +5,12 @@ using System.Collections.Generic;
 public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D caterpillar;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 7f;
     private float currentMoveSpeed;
     private bool isPaused = false;
     public int bodyLength = 1;
     private Vector2 direction = Vector2.up;
-    public GameObject bodyPrefabs;
+    public GameObject[] bodyPrefabs;
     private List<Transform> bodySegments = new List<Transform>();
     private List<Vector2> positionHistory = new List<Vector2>();
 
@@ -73,8 +73,8 @@ public class PlayerScript : MonoBehaviour
             {
                 bodyLength += 1;
                 Debug.Log("body length: " + bodyLength);
-                moveSpeed += 0.5f;
-                currentMoveSpeed = moveSpeed += 0.5f;
+                moveSpeed += 0.3f;
+                currentMoveSpeed = moveSpeed += 0.3f;
                 Debug.Log("movement speed: " + moveSpeed);
                 AddBodySegment();
             }
@@ -94,17 +94,20 @@ public class PlayerScript : MonoBehaviour
 
     void AddBodySegment()
     {
-        Vector2 spawnPos;
-        if (bodySegments.Count == 0)
-        {
-            spawnPos = caterpillar.position - direction * 0.5f;
-        }
-        else
-        {
-            spawnPos = bodySegments[bodySegments.Count - 1].position;
-        }
-        GameObject newSegment = Instantiate(bodyPrefabs, spawnPos, Quaternion.identity);
+        int prefabIndex = Random.Range(0, bodyPrefabs.Length);
+
+        Vector2 spawnPos = bodySegments.Count == 0
+            ? caterpillar.position - direction * 0.5f
+            : bodySegments[bodySegments.Count - 1].position;
+
+        GameObject newSegment = Instantiate(bodyPrefabs[prefabIndex], spawnPos, Quaternion.identity);
         bodySegments.Add(newSegment.transform);
+
+        SpriteRenderer sr = newSegment.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.sortingOrder = -bodySegments.Count;
+        }
     }
 
     void CheckBorderBounds()

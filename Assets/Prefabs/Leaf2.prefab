@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1162427683023243670}
   - component: {fileID: 258044095335776200}
   m_Layer: 0
-  m_Name: Leaf
+  m_Name: Leaf2
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8946709156612456009, guid: 52ad6fcd46402b94f9d55e06fb011175, type: 3}
+  m_Sprite: {fileID: -6700472185959037515, guid: 099e2ffa83e611c48b9b3a9a3fbee9df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
