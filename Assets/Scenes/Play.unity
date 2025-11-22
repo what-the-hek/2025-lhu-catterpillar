@@ -198,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 7976845309858476589, guid: ae743b34d90d75b468cc59d4c3fc6807, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -289,7 +289,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.55, y: 1.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -619,11 +619,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646768430543836994, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8646768430543836994, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.53
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8646768430543836994, guid: 168276f4f0e1dec42b42b8c83d2652af, type: 3}
       propertyPath: m_LocalPosition.z
