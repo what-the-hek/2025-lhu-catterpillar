@@ -34,5 +34,7 @@ public class PlayerScript : MonoBehaviour
     {
         bodyLength += 1;
         Debug.Log("body length: " + bodyLength);
+        moveSpeed += 0.5f;
+        Debug.Log("movement speed: " + moveSpeed);
     }
 }
