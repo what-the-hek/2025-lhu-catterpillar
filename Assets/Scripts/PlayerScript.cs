@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     public string startScene = "";
 	public Button pauseButton;
 	public Button exitButton;
+    public Button play1Button;
+	public Button play2Button;
     public TextMeshProUGUI score;
     public GameObject gameWinBlob;
     public GameObject gameOverBlob;
@@ -36,6 +38,12 @@ public class PlayerScript : MonoBehaviour
 
 		Button exitBtn = exitButton.GetComponent<Button>();
 		exitBtn.onClick.AddListener(TaskOnClickExit);
+
+        Button play1Btn = play1Button.GetComponent<Button>();
+		play1Btn.onClick.AddListener(TaskOnClickExit);
+
+        Button play2Btn = play2Button.GetComponent<Button>();
+		play2Btn.onClick.AddListener(TaskOnClickExit);
     }
 
     void Update()
