@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject gameWinBlob;
     public GameObject gameOverBlob;
     public GameObject pauseBlob;
+    public GameObject butterflyAnimation;
     public AudioClip biteSound;
     public AudioClip ouchSound;
     public AudioSource audioSource;
@@ -141,6 +142,9 @@ public class PlayerScript : MonoBehaviour
             // Debug.Log("YOU WIN");
             moveSpeed = 0f;
             gameWinBlob.SetActive(true);
+            butterflyAnimation.SetActive(true);
+            // gameObject.SetActive(false);
+            // bodySegments.SetActive(false);
         }
             
         // TODO it's constantly in contact with it's body so this constantly fires - fix later
