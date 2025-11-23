@@ -101,6 +101,14 @@ public class PlayerScript : MonoBehaviour
                     audioSource.PlayOneShot(biteSound);
                 }
             }
+            if (other.CompareTag("Obstacle"))
+            {
+                RemoveBodySegment();
+                // if (audioSource != null)
+                // {
+                //     audioSource.PlayOneShot(biteSound);
+                // }
+            }
         }
         else if (bodyLength >= 15)
         {
@@ -133,6 +141,23 @@ public class PlayerScript : MonoBehaviour
             sr.sortingOrder = -bodySegments.Count;
         }
     }
+
+    void RemoveBodySegment()
+{
+    if (bodySegments.Count > 0)
+    {
+        Transform lastSegment = bodySegments[bodySegments.Count - 1];
+        Destroy(lastSegment.gameObject);
+        bodySegments.RemoveAt(bodySegments.Count - 1);
+    }
+    else
+    {
+        Debug.Log("GAME OVER");
+        gameOverBlob.SetActive(true);
+        enabled = false;
+    }
+}
+
 
     void CheckBorderBounds()
     {
