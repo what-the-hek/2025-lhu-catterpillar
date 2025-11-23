@@ -8,7 +8,7 @@ using TMPro;
 public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D caterpillar;
-    public float moveSpeed = 7f;
+    private float moveSpeed = 4f;
     private float currentMoveSpeed;
     private bool isPaused = false;
     public int bodyLength = 0;
@@ -23,6 +23,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject gameWinBlob;
     public GameObject gameOverBlob;
     public GameObject pauseBlob;
+    public AudioClip biteSound;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -94,6 +96,10 @@ public class PlayerScript : MonoBehaviour
                 currentMoveSpeed = moveSpeed += 0.3f;
                 Debug.Log("movement speed: " + moveSpeed);
                 AddBodySegment();
+                if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(biteSound);
+                }
             }
         }
         else if (bodyLength >= 15)
