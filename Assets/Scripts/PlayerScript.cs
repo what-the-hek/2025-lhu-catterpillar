@@ -29,6 +29,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject butterflyAnimation;
     public AudioClip biteSound;
     public AudioClip ouchSound;
+    public AudioClip loseSound;
     public AudioSource audioSource;
 
     void Start()
@@ -143,6 +144,10 @@ public class PlayerScript : MonoBehaviour
             moveSpeed = 0f;
             gameWinBlob.SetActive(true);
             butterflyAnimation.SetActive(true);
+            // if (audioSource != null)
+            //     {
+            //         audioSource.PlayOneShot(winSound);
+            //     }
             // gameObject.SetActive(false);
             // bodySegments.SetActive(false);
         }
@@ -184,6 +189,10 @@ public class PlayerScript : MonoBehaviour
     {
         // Debug.Log("GAME OVER");
         gameOverBlob.SetActive(true);
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(loseSound);
+        }
         enabled = false;
     }
 }
@@ -196,6 +205,10 @@ public class PlayerScript : MonoBehaviour
         {
             // Debug.Log("GAME OVER");
             gameOverBlob.SetActive(true);
+            if (audioSource != null)
+            {
+                audioSource.PlayOneShot(loseSound);
+            }
             enabled = false;
         }
     }
