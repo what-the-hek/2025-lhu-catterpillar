@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour
 	public Button exitButton;
     public Button play1Button;
 	public Button play2Button;
+    public Button muteButton;
     public TextMeshProUGUI score;
     public GameObject gameWinBlob;
     public GameObject gameOverBlob;
@@ -45,6 +46,10 @@ public class PlayerScript : MonoBehaviour
 
         Button play2Btn = play2Button.GetComponent<Button>();
 		play2Btn.onClick.AddListener(TaskOnClickExit);
+
+        Button muteBtn = muteButton.GetComponent<Button>();
+        muteBtn.onClick.AddListener(TaskOnClickMute);
+
     }
 
     void Update()
@@ -188,5 +193,10 @@ public class PlayerScript : MonoBehaviour
     void TaskOnClickExit()
 	{
 		SceneManager.LoadScene(startScene);
+	}
+
+    void TaskOnClickMute()
+	{
+        AudioManagerScript.Instance.ToggleMute();
 	}
 }

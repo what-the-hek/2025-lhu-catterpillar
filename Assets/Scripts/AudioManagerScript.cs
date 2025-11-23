@@ -1,18 +1,34 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
-    private static AudioManagerScript instance;
+    public static AudioManagerScript Instance;
+    public AudioSource bgMusic;
+    public Button muteButton;
+
+
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    void Start()
+    {
+        Button muteBtn = muteButton.GetComponent<Button>();
+        muteBtn.onClick.AddListener(ToggleMute);
+    }
+
+    public void ToggleMute()
+    {
+        bgMusic.mute = !bgMusic.mute;
     }
 }
