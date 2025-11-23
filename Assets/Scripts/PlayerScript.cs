@@ -86,10 +86,16 @@ public class PlayerScript : MonoBehaviour
         // move the body segments with the head
         for (int i = 0; i < bodySegments.Count; i++)
         {
-            int index = (i + 1) * 60; //tweak spacing between segments
+            int index = (i + 1) * 15; //tweak spacing between segments
+            // Debug.Log("INDEX: " + index);
+            // Debug.Log("PS COUNT: " + positionHistory.Count);
+            // Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
             if (index < positionHistory.Count)
             {
                 bodySegments[i].position = positionHistory[index];
+                // Debug.Log("BODY SEGMENTS: " + bodySegments[i].position);
+                // Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
         }
         // if(positionHistory.Count > 1000)
@@ -105,10 +111,10 @@ public class PlayerScript : MonoBehaviour
             if (other.CompareTag("Food"))
             {
                 bodyLength += 1;
-                Debug.Log("body length: " + bodyLength);
+                // Debug.Log("body length: " + bodyLength);
                 moveSpeed += 0.3f;
                 currentMoveSpeed = moveSpeed += 0.3f;
-                Debug.Log("movement speed: " + moveSpeed);
+                // Debug.Log("movement speed: " + moveSpeed);
                 AddBodySegment();
                 if (audioSource != null)
                 {
@@ -126,7 +132,7 @@ public class PlayerScript : MonoBehaviour
         }
         else if (bodyLength >= 15)
         {
-            Debug.Log("YOU WIN");
+            // Debug.Log("YOU WIN");
             moveSpeed = 0f;
             gameWinBlob.SetActive(true);
         }
@@ -134,7 +140,7 @@ public class PlayerScript : MonoBehaviour
         // TODO it's constantly in contact with it's body so this constantly fires - fix later
         // if (other.CompareTag("Body"))
         // {
-        //     Debug.Log("YOU LOSE");
+        //     // Debug.Log("YOU LOSE");
         // }
     }
 
@@ -166,7 +172,7 @@ public class PlayerScript : MonoBehaviour
     }
     else
     {
-        Debug.Log("GAME OVER");
+        // Debug.Log("GAME OVER");
         gameOverBlob.SetActive(true);
         enabled = false;
     }
@@ -178,7 +184,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 viewPos = Camera.main.WorldToViewportPoint(caterpillar.position);
         if (viewPos.x < 0 || viewPos.x > 1 || viewPos.y < 0 || viewPos.y > 1)
         {
-            Debug.Log("GAME OVER");
+            // Debug.Log("GAME OVER");
             gameOverBlob.SetActive(true);
             enabled = false;
         }

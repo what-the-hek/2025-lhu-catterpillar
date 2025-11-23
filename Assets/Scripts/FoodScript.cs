@@ -16,7 +16,7 @@ public class FoodScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("MUNCH!!!");
+        // Debug.Log("MUNCH!!!");
         Respawn();
     }
 }

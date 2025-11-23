@@ -28,6 +28,6 @@ public class StartScript : MonoBehaviour
 	void TaskOnClickExit()
 	{
 		Application.Quit();
-		Debug.Log("CLOSE GAME");
+		// Debug.Log("CLOSE GAME");
 	}
 }

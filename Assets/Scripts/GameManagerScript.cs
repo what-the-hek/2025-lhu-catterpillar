@@ -10,7 +10,7 @@
 //         if (Input.GetKeyDown("escape"))
 //         {
 //             SceneManager.LoadScene(sceneName);
-//             // Debug.Log("Quit Game");
+//             // // Debug.Log("Quit Game");
 //         }
 //         if (Input.GetKeyDown(KeyCode.Return))
 //         {
