@@ -172,6 +172,7 @@ MonoBehaviour:
   biteSound: {fileID: 8300000, guid: 3550b5087cfd48b46bbc734b97ee1d06, type: 3}
   ouchSound: {fileID: 8300000, guid: aece786a673db56468bed3e2c7a9d95c, type: 3}
   loseSound: {fileID: 8300000, guid: dd4893da7e2c84d4796f6db3ef367291, type: 3}
+  winSound: {fileID: 8300000, guid: 85cd827867158da4c9038427f1f3f08d, type: 3}
   audioSource: {fileID: 285648145}
 --- !u!212 &47204361
 SpriteRenderer:

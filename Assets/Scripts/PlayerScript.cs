@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     public AudioClip biteSound;
     public AudioClip ouchSound;
     public AudioClip loseSound;
+    public AudioClip winSound;
     public AudioSource audioSource;
 
     void Start()
@@ -144,10 +145,10 @@ public class PlayerScript : MonoBehaviour
             moveSpeed = 0f;
             gameWinBlob.SetActive(true);
             butterflyAnimation.SetActive(true);
-            // if (audioSource != null)
-            //     {
-            //         audioSource.PlayOneShot(winSound);
-            //     }
+            if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(winSound, 0.1f);
+                }
             // gameObject.SetActive(false);
             // bodySegments.SetActive(false);
         }
