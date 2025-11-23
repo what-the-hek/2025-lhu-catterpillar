@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject gameOverBlob;
     public GameObject pauseBlob;
     public AudioClip biteSound;
+    public AudioClip ouchSound;
     public AudioSource audioSource;
 
     void Start()
@@ -112,10 +113,10 @@ public class PlayerScript : MonoBehaviour
             if (other.CompareTag("Obstacle"))
             {
                 RemoveBodySegment();
-                // if (audioSource != null)
-                // {
-                //     audioSource.PlayOneShot(biteSound);
-                // }
+                if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(ouchSound);
+                }
             }
         }
         else if (bodyLength >= 15)
