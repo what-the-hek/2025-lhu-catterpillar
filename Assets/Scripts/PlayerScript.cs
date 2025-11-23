@@ -83,6 +83,11 @@ public class PlayerScript : MonoBehaviour
             if (direction != Vector2.up)
                 direction = Vector2.down;
 
+        if(Input.GetKeyDown (KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         // move the body segments with the head
         for (int i = 0; i < bodySegments.Count; i++)
         {
