@@ -167,7 +167,7 @@ MonoBehaviour:
   gameWinBlob: {fileID: 1333802319}
   gameOverBlob: {fileID: 1432297337}
   pauseBlob: {fileID: 835449879}
-  biteSound: {fileID: 8300000, guid: 6c5780170913a64449a5fc77aae49900, type: 3}
+  biteSound: {fileID: 8300000, guid: 3550b5087cfd48b46bbc734b97ee1d06, type: 3}
   audioSource: {fileID: 285648145}
 --- !u!212 &47204361
 SpriteRenderer:
