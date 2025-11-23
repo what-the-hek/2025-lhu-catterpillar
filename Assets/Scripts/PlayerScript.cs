@@ -86,7 +86,7 @@ public class PlayerScript : MonoBehaviour
         // move the body segments with the head
         for (int i = 0; i < bodySegments.Count; i++)
         {
-            int index = (i + 1) * 15; //tweak spacing between segments
+            int index = (i + 1) * 5; //tweak spacing between segments
             // Debug.Log("INDEX: " + index);
             // Debug.Log("PS COUNT: " + positionHistory.Count);
             // Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
