@@ -596,8 +596,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fdcce2ca4e3581a4ab187dd5f2cc127f, type: 2}
+  m_sharedMaterial: {fileID: 662132924324623988, guid: fdcce2ca4e3581a4ab187dd5f2cc127f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -732,8 +732,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Very Hangry Caterpillar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0b075ffc95b7d264f9edf0a6ee9f1ee0, type: 2}
+  m_sharedMaterial: {fileID: 8202419423470527510, guid: 0b075ffc95b7d264f9edf0a6ee9f1ee0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1158,8 +1158,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fdcce2ca4e3581a4ab187dd5f2cc127f, type: 2}
+  m_sharedMaterial: {fileID: 662132924324623988, guid: fdcce2ca4e3581a4ab187dd5f2cc127f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
