@@ -128,6 +128,7 @@ public class PlayerScript : MonoBehaviour
             }
             if (other.CompareTag("Obstacle"))
             {
+                bodyLength -= 1;
                 RemoveBodySegment();
                 if (audioSource != null)
                 {
