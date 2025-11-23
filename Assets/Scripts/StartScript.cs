@@ -7,10 +7,9 @@ using UnityEngine.UI;
 
 public class StartScript : MonoBehaviour
 {
-	public string playScene = "";
+	public string controlsScene = "";
 	public Button playButton;
 	public Button exitButton;
-
 
 	void Start()
 	{
@@ -23,7 +22,7 @@ public class StartScript : MonoBehaviour
 
 	void TaskOnClickPlay()
 	{
-		SceneManager.LoadScene(playScene);
+		SceneManager.LoadScene(controlsScene);
 	}
 
 	void TaskOnClickExit()

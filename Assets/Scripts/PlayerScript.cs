@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour
     public TextMeshProUGUI score;
     public GameObject gameWinBlob;
     public GameObject gameOverBlob;
+    public GameObject pauseBlob;
 
     void Start()
     {
@@ -140,6 +141,7 @@ public class PlayerScript : MonoBehaviour
 
     void TogglePause()
     {
+        pauseBlob.SetActive(!isPaused);
         isPaused = !isPaused;
     }
 
