@@ -23,10 +23,15 @@ By the morning of day 2, we had achieved our MVP goals and were able to include 
 
 ## Team Roles
 Jess - programming and Unity
+
 Imogen - 2d animation
+
 Sally -2d art and UI
+
 Savannah - music, sound effects and 2d art
+
 Taylor - typography and UI
+
 
 ## Download and Play
 Our game is free to download and play on Itch.io at https://whatthehek.itch.io/litta-larvae-leafy-buffet.
