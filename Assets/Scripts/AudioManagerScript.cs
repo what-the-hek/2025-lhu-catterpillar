@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AudioManagerScript : MonoBehaviour
 {
     public static AudioManagerScript Instance;
     public AudioSource bgMusic;
-    public Button muteButton;
-
 
     void Awake()
     {
@@ -19,12 +18,6 @@ public class AudioManagerScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void Start()
-    {
-        Button muteBtn = muteButton.GetComponent<Button>();
-        muteBtn.onClick.AddListener(ToggleMute);
     }
 
     public void ToggleMute()

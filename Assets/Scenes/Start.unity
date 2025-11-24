@@ -504,7 +504,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgMusic: {fileID: 495355247}
-  muteButton: {fileID: 358094822}
 --- !u!1 &939899795
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +657,7 @@ MonoBehaviour:
   controlsScene: Controls
   playButton: {fileID: 1684260604}
   exitButton: {fileID: 386203434}
+  muteButton: {fileID: 358094822}
 --- !u!1 &1015977121
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class StartScript : MonoBehaviour
 	public string controlsScene = "";
 	public Button playButton;
 	public Button exitButton;
+	public Button muteButton;
+
 
 	void Start()
 	{
@@ -18,6 +20,10 @@ public class StartScript : MonoBehaviour
 
 		Button exitBtn = exitButton.GetComponent<Button>();
 		exitBtn.onClick.AddListener(TaskOnClickExit);
+
+		Button muteBtn = muteButton.GetComponent<Button>();
+		muteBtn.onClick.AddListener(TaskOnClickMute);
+
 	}
 
 	void TaskOnClickPlay()
@@ -30,4 +36,10 @@ public class StartScript : MonoBehaviour
 		Application.Quit();
 		// Debug.Log("CLOSE GAME");
 	}
+
+	void TaskOnClickMute()
+	{
+		AudioManagerScript.Instance.ToggleMute();
+	}
+
 }
