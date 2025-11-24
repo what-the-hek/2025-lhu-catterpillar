@@ -40,3 +40,6 @@ Our game is free to download and play on Itch.io at https://whatthehek.itch.io/l
 "Getting it Done" Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
 http://creativecommons.org/licenses/by/4.0/
+
+## Dev Requirements
+- Unity Version 6000.0.28f1

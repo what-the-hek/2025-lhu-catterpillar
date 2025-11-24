@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     private List<Transform> bodySegments = new List<Transform>();
     private List<Vector2> positionHistory = new List<Vector2>();
     public string startScene = "";
+    public string playScene = "";
 	public Button pauseButton;
 	public Button exitButton;
     public Button play1Button;
@@ -45,10 +46,10 @@ public class PlayerScript : MonoBehaviour
 		exitBtn.onClick.AddListener(TaskOnClickExit);
 
         Button play1Btn = play1Button.GetComponent<Button>();
-		play1Btn.onClick.AddListener(TaskOnClickExit);
+		play1Btn.onClick.AddListener(TaskOnClickStart);
 
         Button play2Btn = play2Button.GetComponent<Button>();
-		play2Btn.onClick.AddListener(TaskOnClickExit);
+		play2Btn.onClick.AddListener(TaskOnClickStart);
 
         Button muteBtn = muteButton.GetComponent<Button>();
         muteBtn.onClick.AddListener(TaskOnClickMute);
@@ -223,6 +224,11 @@ public class PlayerScript : MonoBehaviour
     void TaskOnClickExit()
 	{
 		SceneManager.LoadScene(startScene);
+	}
+
+    void TaskOnClickStart()
+	{
+		SceneManager.LoadScene(playScene);
 	}
 
     void TaskOnClickMute()

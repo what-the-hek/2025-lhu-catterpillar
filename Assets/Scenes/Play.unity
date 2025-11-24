@@ -159,6 +159,7 @@ MonoBehaviour:
   - {fileID: 2665811418454927476, guid: 5b1a9003cdcf0734ea58e991fdb65a09, type: 3}
   - {fileID: 2665811418454927476, guid: 650bd8f26f7a091439e6e302227e8d31, type: 3}
   startScene: Start
+  playScene: Play
   pauseButton: {fileID: 1233376942}
   exitButton: {fileID: 1494066866}
   play1Button: {fileID: 997240848}
