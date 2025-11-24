@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 640d2c26ea1eebb4f9644588025ad917
+guid: b91cc12ed3076d44daf20a4cbf72d51a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1705387365378916866
-    second: HEADER_-_Pause_Icon_0
-  - first:
-      213: 2183254402450135410
-    second: HEADER_-_Pause_Icon_1
+      213: -7052700337225374531
+    second: Esc_Key_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HEADER_-_Pause_Icon_0
+      name: Esc_Key_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 10
-        height: 44
+        width: 44
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20289d5f5c0caa710800000000000000
-      internalID: 1705387365378916866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HEADER_-_Pause_Icon_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 0
-        width: 10
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2791958cf4a7c4e10800000000000000
-      internalID: 2183254402450135410
+      spriteID: db4676cf866cf1e90800000000000000
+      internalID: -7052700337225374531
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HEADER_-_Pause_Icon_0: 1705387365378916866
-      HEADER_-_Pause_Icon_1: 2183254402450135410
+      Esc_Key_0: -7052700337225374531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
