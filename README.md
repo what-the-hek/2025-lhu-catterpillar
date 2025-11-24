@@ -1,3 +1,5 @@
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/fa3031f8-ec8b-4d9e-a746-1fed6b270f2f" />
+
 # Litta Larvae's Leafy Buffet
 A 2D snake-style game about a hangry caterpillar turning into a butterfly, created during the 2025 [Level Her Up](https://levelherup.com.au/) Game Jam.
 
